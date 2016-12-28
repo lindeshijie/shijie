@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../images/0001.png"/>
+		<img style="opacity: 0;" src="../images/0002.png"/>
+		<button>惦记我消失</button><button>点我出现</button>
+		<script type="text/javascript">
+		var a=document.getElementsByTagName("img")[0]
+		var d=document.getElementsByTagName("img")[1]
+		var b=document.getElementsByTagName("button")[0]
+		var c=document.getElementsByTagName("button")[1]
+		b.onclick=function(){
+			for(var i=0;i<100;i++){
+				(function(){
+					var op=i
+					setTimeout(function(){
+					a.style.opacity=op/100
+					},(100-op)*50)
+				})()
+			}
+			}
+//		c.onclick=function(){
+//			for(var i=0;i<100;i++){
+//				(function(){
+//					var op=i
+//					setTimeout(function(){
+//					d.style.opacity=op/100
+//					},(op*20)
+//				})()
+//			}
+//			}	
+		c.onclick=function(){
+			for(var i=0;i<100;i++){
+				(function(){
+					var oo=i
+					setTimeout(function(){
+					d.style.opacity=oo/100
+					},oo*50)
+				})()
+			}
+			}
+		</script>
+	</body>
+</html>

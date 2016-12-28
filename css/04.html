@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				height:270px;
+				width: 260px;
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			div{
+				height:290px;
+			}
+		</style
+	</head>
+	<body>
+	</body>
+	<div>
+	<img src="../images/0001.png"/>
+	<img src="../images/0003.png"/>
+	<img src="../images/0005.png">
+	</div>
+	<button>点我</button>
+	<script type="text/javascript">
+	var a=document.getElementsByTagName("img")
+	var b=document.getElementsByTagName("button")[0]
+	fadeout(a[0])
+	fadeout(a[1])
+	var f=2
+	b.onclick=function(){
+		if(f==0){
+			fadein(f);
+			f=2;
+			fadeout(f)
+		}else{
+			fadein(f);
+			fadeout(f-1);
+			f--
+		}
+	}
+		function fadeout(elsm){
+			for(var i=0;i<100;i++){
+				(function(){
+					var op=i
+					setTimeout(function(){ 
+						setopcity(elsm,op)
+					},(100-op)*20)
+				})()
+			}
+		}
+		function fadein(elsm){
+			for(var i=0;i<100;i++){
+				(function(){
+					var op=i
+					setTimeout(function(){
+						setopcity(elsm,op)
+					},op*20)
+				})()				
+			}
+		}
+		function setopcity(elsm,level){
+			if(elsm.filters){
+				elsm.style.filter="alpha(opacity="+evel+")"
+			}else{
+				elsm.style.opacity=level/100
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height:300px;
+				width: 300px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" ondragover="dier(event)" ondrop="disan(event)">
+			
+		</div>
+		<img id="tu" src="../images/332.png"/ draggable="true" ondragstart="diyi(event)">
+	</body>
+	<script type="text/javascript">
+		function diyi(ev){
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+		function dier(ev){
+			ev.preventDefault();
+		}
+		function disan(ev){
+			var imgg=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(imgg));
+		}
+		
+	</script>
+</html>

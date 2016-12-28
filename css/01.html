@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function box(){
+			var a=[]
+			for(var i=0;i<5;i++){
+				a[i]=(function(m){
+					return m
+				}
+								)(i)
+			}
+			return a
+			}
+			alert(box())
+		</script>
+	</body>
+</html>
